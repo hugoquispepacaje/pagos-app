@@ -1,0 +1,45 @@
+<div style="margin-top: 10vh; text-align:center">
+  <h2>Pago aceptado</h2>
+</div>
+<table class="table">
+  <tbody>
+    <tr>
+      <th scope="row">N°Pago</th>
+      <td>{{viewData.id}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Nombre del Alumno</th>
+      <td>{{viewData.nombre_alumno}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Nombre del Apoderado</th>
+      <td>{{viewData.nombre_apoderado}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Curso</th>
+      <td>{{viewData.curso}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Rut del Alumno</th>
+      <td>{{viewData.rut_alumno}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Email del apoderado</th>
+      <td>{{viewData.email_apoderado}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Monto Cancelado</th>
+      <td>{{viewData.monto}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Fecha de pago</th>
+      <td>{{viewData.fecha}}</td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: center;">
+  <div class="alert alert-primary" role="alert">
+    Se enviara una copia del Voucher al correo del apoderado.
+  </div>
+  <a style="margin: auto;" class="btn btn-primary" href="/">Volver</a>
+</div>

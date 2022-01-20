@@ -1,0 +1,78 @@
+<div style="text-align: center;margin-top: 20px;">
+  <h2>Pago: {{data.title}}</h2>
+  <h3><small class="text-muted">{{data.montoEnPesos}}</small></h3>
+</div>
+<form class="row g-3 needs-validation" action={{data.url}} method="POST" novalidate>
+  <div class="col-12">
+    <label for="validationCustom01" class="form-label">Nombre Alumno</label>
+    <div class="input-group has-validation">
+      <input type="text" class="form-control" name="nombre_alumno" id="validationCustom01" value="" required>
+      <div class="invalid-feedback">
+        Campo no debe estar vacio.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <label for="validationCustom02" class="form-label">Rut Alumno</label>
+    <div class="input-group has-validation">
+      <input type="text" class="form-control" pattern="^[0-9]+[-|‐]{1}[0-9kK]{1}$" name="rut_alumno"
+        id="validationCustom02" placeholder="11111111-1" value="" required>
+      <div class="invalid-feedback">
+        Debe ser un rut valido.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <label for="validationCustom03" class="form-label">Curso</label>
+    <div class="input-group has-validation">
+      <input type="text" class="form-control" name="curso" id="validationCustom03" value="" required>
+      <div class="invalid-feedback">
+        Campo no debe estar vacio.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <label for="validationCustom04" class="form-label">Nombre Apoderado</label>
+    <div class="input-group has-validation">
+      <input type="text" class="form-control" name="nombre_apoderado" id="validationCustom04" value="" required>
+      <div class="invalid-feedback">
+        Campo no debe estar vacio.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <label for="validationCustom05" class="form-label">Email Apoderado</label>
+    <div class="input-group has-validation">
+      <input type="email" class="form-control" placeholder="aaaa@aaa.aaa" name="email_apoderado" id="validationCustom05"
+        value="" required>
+      <div class="invalid-feedback">
+        Campo debe ser un correo valido.
+      </div>
+    </div>
+  </div>
+  <input type="hidden" name="monto" value={{data.monto}} />
+  <div class="col-6">
+    <a class="btn btn-danger" href="/">Cancelar</a>
+  </div>
+  <div class="col-6 text-end">
+    <button class="btn btn-primary" type="submit">Pagar</button>
+  </div>
+</form>
+<script>
+  (function () {
+    'use strict'
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    let forms = document.querySelectorAll('.needs-validation')
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+</script>

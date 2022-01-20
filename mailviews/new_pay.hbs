@@ -1,0 +1,68 @@
+<span class="preheader">Nuevo Pago</span>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+  <tr>
+    <td>&nbsp;</td>
+    <td class="container">
+      <div class="content">
+        <h1>Aviso de Nuevo Pago</h1>
+        <!-- START CENTERED WHITE CONTAINER -->
+        <table role="presentation" class="main">
+          <!-- START MAIN CONTENT AREA -->
+          <tr>
+            <td class="wrapper">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <p>Saludos,</p>
+                    <p>Se ha recibido un nuevo pago desde el sitio web.</p>
+                    <p>A continuación se muestra una copia del voucher:<br></p>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th scope="row" style="text-align: left;">N°Pago</th>
+                          <td>{{data.id}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="text-align: left;">Nombre del Alumno</th>
+                          <td>{{data.nombre_alumno}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="text-align: left;">Nombre del Apoderado</th>
+                          <td>{{data.nombre_apoderado}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="text-align: left;">Curso</th>
+                          <td>{{data.curso}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="text-align: left;">Rut del Alumno</th>
+                          <td>{{data.rut_alumno}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="text-align: left;">Email del apoderado</th>
+                          <td>{{data.email_apoderado}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="text-align: left;">Monto Cancelado</th>
+                          <td>{{data.monto}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="text-align: left;">Fecha de pago</th>
+                          <td>{{data.fecha}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- END MAIN CONTENT AREA -->
+        </table>
+        <!-- END CENTERED WHITE CONTAINER -->
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
